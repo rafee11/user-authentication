@@ -1,0 +1,34 @@
+{
+    "extends": [
+      "airbnb-angular",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:import/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "warnOnUnsupportedTypeScriptVersion": false
+  },
+    "plugins": [
+      "angular",
+      "@typescript-eslint"
+    ],
+    "rules":{
+      "linebreak-style": 0,
+      "@typescript-eslint/no-parameter-properties": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "no-multiple-empty-lines": [2, {"max": 3, "maxEOF": 0}],
+      "max-lines-per-function": ["error", 75],
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "ts": "never"
+        }
+     ],
+    "@typescript-eslint/indent": ["error", 4]
+    }
+  }
+  

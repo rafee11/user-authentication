@@ -1,0 +1,74 @@
+.btn-blue {
+  background-color: $blue;
+  color: $white;
+  padding: 5px 30px;
+
+  &:hover {
+    background-color: $blue2;
+    color: $white;
+  }
+}
+
+.btn-blue2 {
+  background-color: $blue2;
+  color: $white;
+
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+.btn-navy-blue {
+  background-color: $navy-blue;
+  color: $white;
+
+  &:hover {
+    background-color: $navy-blue;
+    color: $white;
+  }
+}
+
+.btn-grey {
+  background-color: $grey2;
+  color: $white;
+
+  &:hover {
+    background-color: $grey3;
+    color: $white;
+  }
+}
+
+.btn-green {
+  background-color: $green;
+  color: $white;
+
+  &:hover {
+    background-color: $green2;
+    color: $white;
+  }
+}
+
+.btn-white {
+  background: rgba(255, 255, 255, 0.12);
+  color: $white;
+  line-height: 28px;
+
+  &:focus,
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: $white;
+  }
+}
+
+.btn-white-outline {
+  background: $white;
+  border-color: $navy-blue;
+  color: $navy-blue;
+
+  &:focus,
+  &:hover {
+    background-color: $navy-blue;
+    color: $white;
+  }
+}
