@@ -19,7 +19,7 @@
       "@typescript-eslint/no-parameter-properties": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "no-multiple-empty-lines": [2, {"max": 3, "maxEOF": 0}],
-      "max-lines-per-function": ["error", 75],
+      "max-lines-per-function": ["error", 100],
       "import/extensions": [
         "error",
         "ignorePackages",

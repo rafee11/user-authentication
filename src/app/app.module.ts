@@ -30,14 +30,12 @@ import {
     LoginService,
     ChangePasswordService,
     UserService,
-    SocialAuthService,
 } from './services/index';
 
 // Page Components
 import { LoginComponent } from './auth/login/login.component';
 import { ForgotPasswordComponent } from './auth/forgot-password/forgot-password.component';
 import { ResetPasswordComponent } from './auth/reset-password/reset-password.component';
-import { SocialLoginComponent } from './auth/social-login/social-login.component';
 
 
 @NgModule({
@@ -46,7 +44,6 @@ import { SocialLoginComponent } from './auth/social-login/social-login.component
         LoginComponent,
         ForgotPasswordComponent,
         ResetPasswordComponent,
-        SocialLoginComponent,
     ],
     imports: [
         BrowserModule,
@@ -71,7 +68,6 @@ import { SocialLoginComponent } from './auth/social-login/social-login.component
         LoginService,
         ChangePasswordService,
         UserService,
-        SocialAuthService,
     ],
     bootstrap: [AppComponent],
 })

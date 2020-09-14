@@ -6,7 +6,9 @@ import { ApiService } from './api_base/api.service';
     providedIn: 'root',
 })
 export class UserService {
-    constructor(private api: ApiService) { }
+    public constructor(private api: ApiService) {
+        // constructor
+    }
 
     public usersList(payload): Observable<any> {
         return this.api.get('user', payload);

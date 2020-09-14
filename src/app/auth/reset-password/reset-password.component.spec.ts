@@ -5,7 +5,6 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { ResetPasswordComponent } from './reset-password.component';
 
-/* eslint-disable-next-line */
 describe('ResetPasswordComponent', (): void => {
     let component: ResetPasswordComponent;
     let fixture: ComponentFixture<ResetPasswordComponent>;

@@ -27,8 +27,7 @@ export class ForgotPasswordComponent implements OnInit {
                 '',
                 [
                     Validators.required,
-                    /* eslint-disable-next-line */
-                Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
+                    Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]],
         });
     }
 
@@ -37,6 +36,7 @@ export class ForgotPasswordComponent implements OnInit {
         if (this.forgotpasswordForm.invalid) {
             return;
         }
+        this.router.navigate(['/reset-password']);
         const email = this.forgotpasswordForm.controls.email.value;
         this.api.forgotPassword({ email }).subscribe((): void => {
             this.router.navigate(['/reset-password']);

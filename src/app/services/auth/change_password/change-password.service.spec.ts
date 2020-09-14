@@ -3,7 +3,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ChangePasswordService } from './change-password.service';
 
-/* eslint-disable-next-line */
 describe('ChangePasswordService', (): void => {
     let service: ChangePasswordService;
     beforeEach((): void => {

@@ -106,11 +106,6 @@ body {
 
 /******************** Auth Section Styles **********************/
 
-.card-container::after,
-.auth-content {
-  background-image: url('./assets/images/auth-bg.png');
-}
-
 .auth-content {
   min-height: 100vh;
   background-size: cover;

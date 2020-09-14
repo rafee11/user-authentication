@@ -54,7 +54,7 @@
 }
 
 .custom-select {
-  background: url('./assets/images/down-arrow-grey.png') no-repeat right 0.75rem center/10px 9px;
+  background-image: url('/assets/images/down-arrow-grey.png') no-repeat right 0.75rem center/10px 9px;
 
   &.no-arrow {
     background: none !important;

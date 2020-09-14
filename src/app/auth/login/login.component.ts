@@ -11,7 +11,7 @@ export class LoginComponent implements OnInit {
 
     public submitted = false;
 
-    passwordType: string = 'password';
+    public passwordType: string = 'password';
 
     public togglePassword = false;
 
@@ -76,8 +76,7 @@ export class LoginComponent implements OnInit {
                 '',
                 Validators.compose([
                     Validators.required,
-                    /* eslint-disable-next-line */
-                Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'),
+                    Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$'),
                 ]),
             ],
             userPassword: ['', Validators.required],
