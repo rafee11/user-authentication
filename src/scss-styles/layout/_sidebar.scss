@@ -1,0 +1,172 @@
+// /********* sidemenu ************/
+.own-sidemenu-main {
+  width: 270px;
+  transition: 1s;
+  position: fixed;
+  z-index: 3;
+  border: 0;
+  top: 0;
+
+  .menu-txt {
+    padding-left: 10px;
+    font-weight: 400;
+  }
+
+  &.show {
+    .menu-txt {
+      animation: show-menu-txt 3s linear;
+    }
+  }
+
+  &.closed {
+    width: 65px;
+
+    .menu-txt {
+      opacity: 0;
+      display: none;
+      color: #fff;
+    }
+  }
+
+  .list-group {
+    @extend .pt20;
+
+    margin-top: 53px;
+    height: 100vh;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25) !important;
+
+    a {
+      border-radius: 0;
+      display: block;
+      color: #686868;
+      text-decoration: none;
+    }
+
+    span {
+      display: inline-block;
+      color: #646464;
+    }
+
+    .list-group-item {
+      border: 0;
+      white-space: nowrap;
+      border-radius: 0;
+
+      @extend .pb3;
+      @extend .pt3;
+      @extend .pl12;
+      @extend .mb20;
+      @extend .ml1;
+
+      color: #686868;
+      border-left: 3px solid transparent;
+
+      .menu-icon {
+        display: inline-block;
+
+        img {
+          height: 20px;
+          width: 20px;
+          margin: -9px 8px;
+        }
+      }
+
+      .active-img {
+        display: none;
+      }
+
+      &:hover,
+      &.active {
+        border-color: $navy-blue;
+        background: transparent;
+
+        .menu-txt {
+          color: $navy-blue;
+        }
+
+        .active-img {
+          display: inline-block;
+        }
+
+        .inactive-img {
+          display: none;
+        }
+      }
+
+      &.active {
+        .menu-txt {
+          color: $navy-blue;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .sub-menu {
+      margin-bottom: 0;
+
+      &:hover {
+        border-color: transparent;
+      }
+
+      ul {
+        @extend .pt0;
+        @extend .pb20;
+
+        list-style: none;
+
+        li {
+          &.active {
+            a {
+              @extend .color-navyblue;
+
+              font-weight: 500;
+            }
+          }
+
+          &:not(:last-child) {
+            @extend .mb20;
+          }
+        }
+      }
+    }
+  }
+  // .sidemenu-main {}
+  .list-group-item-submenu.active,
+  .list-group-item.active {
+    span {
+      color: #335eea;
+      font-weight: 600;
+    }
+  }
+}
+
+.dropdown-parent-list {
+  .menu-txt {
+    @extend .pr20;
+
+    .arrow {
+      right: 0;
+      top: 5px;
+      transition: 1s;
+
+      &.rotateup {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+}
+
+@keyframes show-menu-txt {
+  from {
+    opacity: 0;
+    display: none;
+  }
+
+  to {
+    opacity: 1;
+    display: inline-block;
+  }
+}
+
+// /********* sidemenu ************/

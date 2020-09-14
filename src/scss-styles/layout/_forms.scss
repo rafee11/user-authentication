@@ -1,0 +1,62 @@
+.auth-content {
+  .form-control {
+    color: $white;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  .form-control,
+  .input-group-text {
+    background-color: rgba(112, 112, 112, 0.9);
+    border-color: rgba(112, 112, 112, 0.9);
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .input-group-append {
+    margin-left: 0;
+  }
+
+  .input-group-text {
+    border-left: none !important;
+  }
+
+  .custom-checkbox {
+    .custom-control-input:checked ~ .custom-control-label {
+      &::before {
+        background-color: $blue;
+        border-color: $blue;
+      }
+    }
+
+    .custom-control-label {
+      &::before {
+        border: 2px solid rgba(112, 112, 112, 1);
+        background-color: transparent;
+      }
+
+      &::after,
+      &::before {
+        border-radius: 50%;
+        top: 1.5px;
+        left: -21px;
+      }
+    }
+  }
+}
+
+.custom-input-form {
+  .custom-select,
+  .form-control {
+    height: 44px;
+  }
+}
+
+.custom-select {
+  background-image: url('/assets/images/down-arrow-grey.png') no-repeat right 0.75rem center/10px 9px;
+
+  &.no-arrow {
+    background: none !important;
+  }
+}

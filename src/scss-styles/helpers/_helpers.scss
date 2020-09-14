@@ -1,0 +1,59 @@
+/********* margin & padding  **********/
+$spaceamounts: (0, 1, 2, 3, 5, 7, 8, 10, 12, 15, 18, 20, 25, 30, 40, 50, 55, 59,  60, 65, 70, 80, 95, 100);
+$sides: (top, bottom, left, right, all);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    @if $side == 'all' {
+      .m#{$space} {
+        margin: #{$space}px;
+      }
+
+      .p#{$space} {
+        padding: #{$space}px;
+      }
+    }
+
+    @else {
+      .m#{str-slice($side, 0, 1)}#{$space} {
+        margin-#{$side}: #{$space}px;
+      }
+
+      .p#{str-slice($side, 0, 1)}#{$space} {
+        padding-#{$side}: #{$space}px;
+      }
+    }
+  }
+}
+
+/********* margin & padding  **********/
+
+.mt-minus-5 {
+  margin-top: -5px;
+}
+
+/********* Border radius ***********/
+
+.br-10 {
+  border-radius: 10px;
+}
+
+.br-30 {
+  border-radius: 30px;
+}
+
+/********* / Border radius ***********/
+
+
+
+/********* width & height ***********/
+
+.w-35px {
+  width: 35px;
+}
+
+.w-26px {
+  width: 26px;
+}
+
+/********* width & height ***********/

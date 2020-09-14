@@ -1,0 +1,80 @@
+.menu-button-bars {
+  width: 29px;
+  margin-top: 3px;
+  cursor: pointer;
+
+  .bar {
+    transition: 0.5s;
+    background: white;
+    height: 3px;
+    border-radius: 30px;
+    display: block;
+
+    @extend .mb7;
+
+    &:first-child {
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      width: 50%;
+    }
+
+    &:nth-child(3) {
+      width: 75%;
+
+      @extend .mb0;
+    }
+  }
+
+  &.sidemenuopened,
+  &:hover {
+    .bar {
+      width: 100%;
+    }
+  }
+}
+
+.navbar {
+  background-color: $navy-blue;
+  padding: 4px 14px;
+
+  .navbar-brand {
+    text-align: center;
+    width: 256px;
+    overflow: hidden;
+    margin-right: 0;
+    transition: 1s;
+
+    .full-logo {
+      width: 150px;
+    }
+
+    &.sidmenu-open {
+      width: 50px;
+    }
+  }
+}
+
+.notification-count {
+  height: 20px;
+  width: 20px;
+  padding: 2px 1px;
+
+  @extend .fs9;
+
+  right: -6px;
+  top: -6px;
+  background: $navy-blue;
+  border: 1px solid $white;
+}
+
+.dropimg {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+}
+
+.short-logo {
+  display: none;
+}

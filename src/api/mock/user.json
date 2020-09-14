@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "email": "olivier@usecology.com",
+    "password": "$2a$10$/VQYP91x4Ht1hijkRu/yze/q3xqKRGIk3HQ/VFhPN3pYEudP72PTy",
+    "first_name": "Olivier",
+    "last_name": "Monge",
+    "phone_number": "5654757356",
+    "pass_ref": "1234"
+  }
+]

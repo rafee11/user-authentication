@@ -1,0 +1,17 @@
+/********* font size **********/
+$spaceamounts: (8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 22, 24, 25, 26, 28, 65); // Adjust this to include the pixel amounts you need.
+$sides: (size); // Leave this variable alone
+
+@each $size in $spaceamounts {
+  @each $side in $sides {
+    .f#{str-slice($side, 0, 1)}#{$size} {
+      font-#{$side}: #{$size}px;
+    }
+  }
+}
+
+/********* font size **********/
+
+.fw-500 {
+  font-weight: 500;
+}

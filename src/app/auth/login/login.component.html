@@ -1,0 +1,67 @@
+<section class="auth-content">
+    <div class="auth-overlay  d-flex align-items-center w-100">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-7 col-lg-5 mx-auto px-lg-0">
+             <div class="card-container">
+                <div class="card-header text-center">
+                   <img src="./assets/images/logo.png" routerLink="/login"  class="c-pointer" alt="Angular admin" >
+                </div>
+                <div class="card-body p20">
+                   <div class="row">
+                      <div class="col-md-12 col-lg-11 m-auto">
+                          <div class="my-2">
+                            <h1 class="auth-title text-uppercase">Login</h1>
+                            </div>
+
+                         <form name="form" [formGroup]="loginForm" (ngSubmit)="login()"  novalidate>
+                         <div class="mb-4">
+                                <label class="text-white op-90">Email</label>
+                          <div class="input-group">
+                              <input type="email" class="form-control" placeholder="" autocomplete="off" formControlName="userEmail">                    
+                              <div class="input-group-append">
+                                <span class="input-group-text"><em class="fas fa-envelope theme-color"></em></span>
+                              </div>
+                          </div>
+
+                          <div class="color-red" *ngIf="submitted && loginForm.get('userEmail').errors">
+                             <small *ngIf="loginForm.get('userEmail').errors.required">Enter email address</small>
+                             <small *ngIf="loginForm.get('userEmail').errors.pattern">Enter valid email address</small>
+                          </div>
+                        </div>
+                        <div class="mb-4">
+                                <label class="text-white op-90">Password</label>
+                         <div class="input-group">
+                            <input [type]="passwordType" class="form-control" name="password" placeholder="" formControlName="userPassword" > 
+                            <div class="input-group-append">
+                                <span class="input-group-text c-pointer" (click)="passwordToggle()"><em class="fas theme-color" [ngClass]="{'fa-eye-slash': togglePassword, 'fa-eye': !togglePassword}"></em></span>
+                             </div>
+                         </div>
+
+                         <div class="color-red" *ngIf="submitted && loginForm.get('userPassword').errors">
+                           <small *ngIf="loginForm.get('userPassword').errors.required">Enter password</small>
+                        </div>
+                         </div>
+                         <div class="row">
+                            <div class="col-6 col-md-6">
+                               <div class="custom-control custom-checkbox mr-sm-2 text-white">
+                                  <input type="checkbox" class="custom-control-input" id="rememberMe" (change)="rememberMe($event.target.checked)" name="rememberMe" [checked]="rememberMeData">
+                                  <label class="custom-control-label c-pointer fs12"  for="rememberMe">Remember Me</label>
+                               </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                               <span routerLink="/forgot-password" class="c-pointer text-white float-right fs12">Forgot Password?</span>
+                            </div>
+                         </div>
+                               <button class="btn btn-blue btn-block  my-4" type="submit">Login</button>
+                            
+                         </form>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+</div>
+  </section>

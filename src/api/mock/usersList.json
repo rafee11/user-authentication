@@ -1,0 +1,21 @@
+[
+    {
+        "id": 1123555,
+        "firstName": "olivier",
+        "lastName": "Monge",
+        "email": "olivier@useecology.com",
+        "phoneNumber": "5654757356",
+        "dob": "2018-05-05",
+        "country": "india",
+        "pincode": "65754467",
+        "gender": "male",
+        "address1": "test",
+        "address2": "test",
+        "city": "test",
+        "state": "test",
+        "hobbies": "hobbies",
+        "bio": "bio",
+        "password": "1234",
+        "pass_ref": "1234"
+      }
+]
